@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Дев</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<div class="preloader">
+		<div class="lds-heart">
+			<div></div>
+		</div>
+		<p>Давайте вместе подождём, пока всё загрузится</p>
+	</div>
+
+	<div class="welcome-layer">
+		<p>Добро пожаловать!</p>
+	</div>
+
+	<main>
+		<video autoplay muted loop>
+			<source src="background.mp4" type="video/mp4">
+			Ваш браузер не поддерживает видео.
+		</video>
+		<div class="slider">
+			<div class="slide" id="about-me">
+				<div class="about-me-container">
+					<div class="text">
+						<h1>Обо мне</h1>
+						<p>Здесь располагается информация обо мне. Расскажу о своём опыте, увлечениях и проектах. Текст
+							можно оформить в несколько абзацев для лучшей читаемости.</p>
+					</div>
+					<div class="photo">
+						<img src="path/to/photo.jpg" alt="Мое фото">
+					</div>
+				</div>
+			</div>
+
+			<div class="slide" id="my-links">
+				<h1>Мои ссылки</h1>
+				<div class="links-container">
+					<a href="https://t.me/taskov1ch" target="_blank" class="link-btn">
+						<img src="..." alt="Telegram">
+						Telegram
+					</a>
+
+					<a href="https://vk.com/taskov1ch" target="_blank" class="link-btn">
+						<img src="..." alt="VK">
+						VK
+					</a>
+
+					<a href="https://ko-fi.com/taskov1ch" target="_blank" class="link-btn">
+						<img src="..." alt="KO-FI">
+						Buy Me Coffee
+					</a>
+
+					<a href="https://www.youtube.com/@taskov1ch" target="_blank" class="link-btn">
+						<img src="..." alt="YouTube">
+						YouTube
+					</a>
+
+					<a href="#" target="_blank" class="link-btn">
+						<img src="..." alt="Talk 24Serv">
+						Кнопка 5
+					</a>
+
+					<a href="#" target="_blank" class="link-btn">
+						<img src="..." alt="Anixart">
+						Кнопка 6
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="indicators">
+			<ul></ul>
+		</div>
+	</main>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
