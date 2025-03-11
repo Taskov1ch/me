@@ -4,11 +4,17 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Дев</title>
-	<link rel="stylesheet" href="styles.css">
+	<title>Taskov1ch</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="assets/images/chibi_naruto_resized.png" type="image/x-icon">
 </head>
 
 <body>
+	<video autoplay muted loop class="background">
+		<source src="assets/videos/background.mp4" type="video/mp4">
+		Ваш браузер не поддерживает видео.
+	</video>
+
 	<div class="preloader">
 		<div class="lds-heart">
 			<div></div>
@@ -21,58 +27,132 @@
 	</div>
 
 	<main>
-		<video autoplay muted loop>
-			<source src="background.mp4" type="video/mp4">
-			Ваш браузер не поддерживает видео.
-		</video>
+		<div class="music-button" onclick="toggleMusic()">
+			<img src="assets/images/music_button.svg" alt="Music">
+		</div>
+
+		<audio id="background-music" loop>
+			<source src="assets/audios/Monkeys-Spinning-Monkeys(chosic.com).mp3" type="audio/mp3">
+			Ваш браузер не поддерживает аудио.
+		</audio>
+
+		<div class="screamer">
+			<img src="assets/images/screamer.png" alt="Scary Image">
+		</div>
+
+		<audio id="screamer-audio">
+			<source src="assets/audios/Jumpscare Sound.mp3" type="audio/mp3">
+		</audio>
+
 		<div class="slider">
 			<div class="slide" id="about-me">
 				<div class="about-me-container">
 					<div class="text">
 						<h1>Обо мне</h1>
-						<p>Здесь располагается информация обо мне. Расскажу о своём опыте, увлечениях и проектах. Текст
-							можно оформить в несколько абзацев для лучшей читаемости.</p>
+						<p>Меня зовут <b>Асхат</b>, я из <a
+								href="https://ru.wikipedia.org/wiki/%D0%9A%D1%8B%D1%80%D0%B3%D1%8B%D0%B7%D1%81%D1%82%D0%B0%D0%BD"
+								target="_blank"><img src="assets/images/kyrgyzstan.svg" alt="Kyrgyzstan"
+									class="kyrgyzstan_flag logo"> <b>Кыргызстана</b></a>, мне 16 лет. Мой никнейм <a
+								href="https://mynickname.com/id1815468" target="_blank"><b>Taskov1ch</b></a>.
+							Интересуюсь программированием. Я начинающий художник под руководством более опытного
+							наставника. Перфекционист, атеист, частичный кофеман. Мой любимый язык программирования — <a
+								href="https://python.org/" target="_blank"><img src="assets/images/python.svg"
+									alt="Python" class="python_logo logo"> <b>Python</b></a>. Хорошо работаю с <a
+								href="https://minecraft.fandom.com/ru/wiki/%D0%9A%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%BD%D1%8B%D0%B9_%D0%B1%D0%BB%D0%BE%D0%BA"
+								target="_blank"><img src="assets/images/minecraft.svg" alt="Minecraft"
+									class="minecraft_logo logo"> <b>командными блоками</b></a> <i>(хотя может быть я его
+								забыл)</i>. Люблю страдать фигнёй и писать плагины, утилиты для <a
+								href="https://pmmp.io/" target="_blank"><img src="assets/images/pmmp.png" alt="PMMP"
+									class="pmmp_logo logo"> <b>PocketMine-MP</b></a>. Люблю смотреть аниме и
+							мультфильмы. Мои любимые жанры — боевики, детективы, ужасы и мистические истории. Всегда
+							готов помочь, если человек адекватен и имеет IQ выше 105. Не против получить что-то лёгкими
+							путями. Мой день рождения
+							<img src="assets/images/cake.svg" alt="Cake" class="cake logo"> <b>4 мая 2008 года</b>.</p>
+
+						<div class="quick-buttons">
+							<button onclick="goToSlideById('links')">Мои ссылки</button>
+							<button onclick="goToSlideById('mascots')">Маскоты</button>
+						</div>
 					</div>
+
 					<div class="photo">
-						<img src="path/to/photo.jpg" alt="Мое фото">
+						<img src="..." alt="Main">
 					</div>
 				</div>
 			</div>
 
-			<div class="slide" id="my-links">
+			<div class="slide" id="links">
 				<h1>Мои ссылки</h1>
 				<div class="links-container">
 					<a href="https://t.me/taskov1ch" target="_blank" class="link-btn">
-						<img src="..." alt="Telegram">
+						<img src="assets/images/telegram.png" alt="Telegram">
 						Telegram
 					</a>
 
 					<a href="https://vk.com/taskov1ch" target="_blank" class="link-btn">
-						<img src="..." alt="VK">
+						<img src="assets/images/vk.png" alt="VK">
 						VK
 					</a>
 
 					<a href="https://ko-fi.com/taskov1ch" target="_blank" class="link-btn">
-						<img src="..." alt="KO-FI">
-						Buy Me Coffee
+						<img src="assets/images/kofi.png" alt="KO-FI">
+						KO-FI
 					</a>
 
 					<a href="https://www.youtube.com/@taskov1ch" target="_blank" class="link-btn">
-						<img src="..." alt="YouTube">
+						<img src="assets/images/youtube.png" alt="YouTube">
 						YouTube
 					</a>
 
-					<a href="#" target="_blank" class="link-btn">
-						<img src="..." alt="Talk 24Serv">
-						Кнопка 5
+					<a href="https://talk.24serv.pro/u/dinner_bone" target="_blank" class="link-btn">
+						<img src="assets/images/t24s.png" alt="Talk 24Serv">
+						Talk 24Serv
 					</a>
 
-					<a href="#" target="_blank" class="link-btn">
-						<img src="..." alt="Anixart">
-						Кнопка 6
+					<a href="https://anixart.tv/profile/1932711" target="_blank" class="link-btn">
+						<img src="assets/images/anixart.png" alt="Anixart">
+						Anixart
 					</a>
 				</div>
 			</div>
+
+			<div class="slide" id="mascots">
+				<h1 class="slide-title">Мои маскоты</h1>
+				<div class="slide-container">
+					<div class="character-info yuki">
+						<h2>Юки</h2>
+						<p>Дата создания: 04.05.2023</p>
+						<br>
+						<p>Юки – девочка с мягкой, но яркой индивидуальностью, которая олицетворяет нежность и
+							мечтательность. Любит кодить, смотреть аниме и заниматься всякой ерундой. Вдохновлена такими
+							персонажами, как <b><a
+									href="https://naruto.fandom.com/ru/wiki/%D0%A5%D0%B8%D0%BD%D0%B0%D1%82%D0%B0_%D0%A5%D1%8C%D1%8E%D0%B3%D0%B0"
+									target="_blank">Хината Хьюга из Naruto</a></b> и <b><a
+									href="https://typemoon.fandom.com/ru/wiki/%D0%98%D0%BB%D0%B8%D1%8F%D1%81%D0%B2%D0%B8%D0%BB%D1%8C_%D1%84%D0%BE%D0%BD_%D0%90%D0%B9%D0%BD%D1%86%D0%B1%D0%B5%D1%80%D0%BD"
+									target="_blank">Иллиясфиль фон Айнцберн из Fate</a> <i><a
+										href="https://anime-characters-fight.fandom.com/ru/wiki/%D0%98%D0%BB%D0%B8%D1%8F"
+										target="_blank">(Иллия, если речь о девочке-волшебнице)</a></i></b>.</p>
+					</div>
+					<div class="character-image">
+						<img src="assets/images/silvana_yuki.png" alt="Mascots">
+						<!-- <img src="assets/images/silvana.png" alt="">
+						 <img src="assets/images/yuki.png" alt=""> -->
+					</div>
+					<div class="character-info silvana">
+						<h2>Сильвана</h2>
+						<p>Дата создания: 03.01.2025</p>
+						<br>
+						<p>Сильвана – сильная, решительная и справедливая. Терпеть не может беспорядок, оффтопы и плохо
+							структурированные темы. Она олицетворяет перфекционизм, справедливость и порядок.
+							Вдохновлена такими персонажами, как <b><a
+									href="https://akamegakill.fandom.com/ru/wiki/%D0%90%D0%BA%D0%B0%D0%BC%D0%B5"
+									target="_blank">Акаме из Akame ga Kill!</a></b> и <b><a
+									href="https://mobile-legends.fandom.com/wiki/Silvanna" target="_blank">Сильваной из
+									Mobile Legends: Bang Bang</a></b>.</p>
+					</div>
+				</div>
+			</div>
+
 		</div>
 
 		<div class="indicators">
@@ -80,7 +160,9 @@
 		</div>
 	</main>
 
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="script.js"></script>
 </body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+
 </html>
