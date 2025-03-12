@@ -154,13 +154,4 @@ $(document).ready(function () {
 		$music[0].paused ? $music[0].play() : $music[0].pause();
 		$musicButton.toggleClass("music-playing");
 	};
-
-	// Эффект наклона
-	$(document).on("mousemove", e => {
-		if ($music[0].paused) return;
-		const w = $(window).width(), h = $(window).height();
-		const rotateY = ((e.clientX - w / 2) / (w / 2)) * 3;
-		const rotateX = -((e.clientY - h / 2) / (h / 2)) * 3;
-		$("main").css("transform", `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`);
-	});
 });
