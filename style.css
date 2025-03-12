@@ -93,17 +93,6 @@ body {
 	border-radius: 50% 50% 0 0;
 }
 
-.scene {
-	width: 100%;
-	height: 100%;
-	perspective: 1000px;
-	/* <-- перспектива на родителе */
-	perspective-origin: center;
-	/* при необходимости */
-	overflow: hidden;
-	/* чтобы не было скролла */
-}
-
 main {
 	opacity: 0;
 	transition: opacity 1s ease-in-out;
@@ -361,12 +350,6 @@ a {
 	font-size: 2.5rem;
 	z-index: 4;
 	text-align: center;
-}
-
-@media (max-width: 768px) {
-	html {
-		display: none;
-	}
 }
 
 @keyframes lds-heart {
